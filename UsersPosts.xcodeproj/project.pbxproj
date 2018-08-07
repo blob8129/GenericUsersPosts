@@ -16,6 +16,7 @@
 		CE3977C221189AD900CCD0C9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977C121189AD900CCD0C9 /* NetworkService.swift */; };
 		CE3977C521189E2300CCD0C9 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977C421189E2300CCD0C9 /* NetworkingTests.swift */; };
 		CE3977C72118A58B00CCD0C9 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977C62118A58B00CCD0C9 /* Mocks.swift */; };
+		CE3977CA2119F2DC00CCD0C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977C92119F2DC00CCD0C9 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		CE3977C121189AD900CCD0C9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		CE3977C421189E2300CCD0C9 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		CE3977C62118A58B00CCD0C9 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		CE3977C92119F2DC00CCD0C9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 		CE3977BE21189AA900CCD0C9 /* Users */ = {
 			isa = PBXGroup;
 			children = (
+				CE3977C82119F2CF00CCD0C9 /* Entity */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -127,6 +130,14 @@
 				CE3977C121189AD900CCD0C9 /* NetworkService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		CE3977C82119F2CF00CCD0C9 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CE3977C92119F2DC00CCD0C9 /* User.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3977CA2119F2DC00CCD0C9 /* User.swift in Sources */,
 				CE3977A121189A9500CCD0C9 /* ViewController.swift in Sources */,
 				CE3977C221189AD900CCD0C9 /* NetworkService.swift in Sources */,
 				CE39779F21189A9500CCD0C9 /* AppDelegate.swift in Sources */,
