@@ -17,6 +17,7 @@
 		CE3977C521189E2300CCD0C9 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977C421189E2300CCD0C9 /* NetworkingTests.swift */; };
 		CE3977C72118A58B00CCD0C9 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977C62118A58B00CCD0C9 /* Mocks.swift */; };
 		CE3977CA2119F2DC00CCD0C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977C92119F2DC00CCD0C9 /* User.swift */; };
+		CE3977CD2119F4FA00CCD0C9 /* Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977CC2119F4FA00CCD0C9 /* Convertible.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		CE3977C421189E2300CCD0C9 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		CE3977C62118A58B00CCD0C9 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		CE3977C92119F2DC00CCD0C9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		CE3977CC2119F4FA00CCD0C9 /* Convertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convertible.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		CE39779D21189A9500CCD0C9 /* UsersPosts */ = {
 			isa = PBXGroup;
 			children = (
+				CE3977CB2119F4E800CCD0C9 /* Protocols */,
 				CE3977C021189ABF00CCD0C9 /* Services */,
 				CE3977BE21189AA900CCD0C9 /* Users */,
 				CE3977BF21189AAF00CCD0C9 /* Posts */,
@@ -138,6 +141,14 @@
 				CE3977C92119F2DC00CCD0C9 /* User.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		CE3977CB2119F4E800CCD0C9 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CE3977CC2119F4FA00CCD0C9 /* Convertible.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +255,7 @@
 				CE3977CA2119F2DC00CCD0C9 /* User.swift in Sources */,
 				CE3977A121189A9500CCD0C9 /* ViewController.swift in Sources */,
 				CE3977C221189AD900CCD0C9 /* NetworkService.swift in Sources */,
+				CE3977CD2119F4FA00CCD0C9 /* Convertible.swift in Sources */,
 				CE39779F21189A9500CCD0C9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
