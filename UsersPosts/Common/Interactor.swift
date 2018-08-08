@@ -9,7 +9,9 @@
 import Foundation
 
 
-final class Interactor<EntityType: Convertible & Decodable, V>: InteractorInput where EntityType.TypeToConvertTo == V {
+final class Interactor<EntityType: Convertible & Decodable, V, DelegateType: InteractorDelegate>: InteractorInput
+                                                                                                    where EntityType.TypeToConvertTo == V,
+                                                                                                    DelegateType.EntityType == EntityType {
     typealias ViewModelConvertibleType = EntityType
     typealias ViewModelType = V
     
@@ -17,32 +19,32 @@ final class Interactor<EntityType: Convertible & Decodable, V>: InteractorInput 
     private var url: URL
     private var networkService: NetworkServiceProtocol
     private var decoder: JSONDecoder
-    internal var entities: [ViewModelConvertibleType] = [ViewModelConvertibleType]()
+    internal var entities: [EntityType] = [EntityType]()
+    weak var delegate: DelegateType?
     
     init(networkService: NetworkServiceProtocol, url: URL, decoder: JSONDecoder) {
         self.networkService = networkService
         self.url = url
         self.decoder = decoder
     }
+    
+    func didSelectedItem(at indexPath: IndexPath) {
+        delegate?.didSelected(entity: entities[indexPath.row])
+    }
 }
 
 extension Interactor {
     func viewDidLoad() {
-        
         networkService.loadData(at: url) { result in
             switch result {
-                
             case .success(let data):
                 do {
-                    
                     self.entities = try JSONDecoder().decode([EntityType].self, from: data)
                     DispatchQueue.main.async {
                         self.view?.didLoadedViewModels()
                     }
-                    print("Entities \(self.entities)")
                 } catch let error {
                     print("D Error \(error)")
-                    
                 }
             case .error(let error):
                 print("Error \(error)")

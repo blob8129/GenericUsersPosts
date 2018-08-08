@@ -13,12 +13,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
+    var coordinator: Coordinator<User>?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        let vc = UsersBuilder().build()
-        window?.rootViewController = vc
-        window?.makeKeyAndVisible()
+        let navigationController = UINavigationController()
+        coordinator = Coordinator<User>(rootViewController: navigationController)
+        coordinator?.window = window
+        coordinator?.start()
+     //   let vc = UsersBuilder().build(for: coordinator)
+    //    window?.rootViewController = vc
+    //    window?.makeKeyAndVisible()
         return true
     }
 

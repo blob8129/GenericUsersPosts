@@ -10,7 +10,9 @@ import UIKit
 
 
 
-class ViewVC<ViewModelType, InteractorType: InteractorInput, CellType: ViewModelConfigurable>: UIViewController, UITableViewDataSource where InteractorType.ViewModelType == ViewModelType, CellType.ViewModelType == ViewModelType, CellType: UITableViewCell {
+class ViewVC<ViewModelType, InteractorType: InteractorInput, CellType: ViewModelConfigurable>: UIViewController, UITableViewDataSource, UITableViewDelegate
+                                                            where InteractorType.ViewModelType == ViewModelType,
+                                                                    CellType.ViewModelType == ViewModelType, CellType: UITableViewCell {
     
     var interactor: InteractorType?
     let cellId = "CellId"
@@ -18,6 +20,7 @@ class ViewVC<ViewModelType, InteractorType: InteractorInput, CellType: ViewModel
     private lazy var tableView: UITableView = { tv in
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.dataSource = self
+        tv.delegate = self
         tv.rowHeight = UITableViewAutomaticDimension
         tv.estimatedRowHeight = 200
         return tv
@@ -56,6 +59,10 @@ class ViewVC<ViewModelType, InteractorType: InteractorInput, CellType: ViewModel
             cell?.configure(for: viewModel)
         }
         return cell!
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        interactor?.didSelectedItem(at: indexPath)
     }
 }
 

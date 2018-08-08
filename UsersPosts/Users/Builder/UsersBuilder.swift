@@ -11,15 +11,16 @@ import UIKit
 
 final class UsersBuilder {
     
-    func build() -> UIViewController {
+    func build(for delegate: Coordinator<User>?) -> UIViewController {
         let url = URL(string: "https://jsonplaceholder.typicode.com/users")!
         
-        let interactor = Interactor<User, UserViewModel>(networkService: NetworkService(),
+        let interactor = Interactor<User, UserViewModel, Coordinator<User>>(networkService: NetworkService(),
                                         url: url,
                                         decoder: JSONDecoder())
-        let vc = ViewVC<UserViewModel, Interactor<User, UserViewModel>, UserTVCell>()
+        let vc = ViewVC<UserViewModel, Interactor<User, UserViewModel, Coordinator<User>>, UserTVCell>()
         interactor.view = vc
         vc.interactor = interactor
+        interactor.delegate = delegate
         return vc
     }
 }

@@ -48,8 +48,6 @@ extension NetworkError: Equatable {
     }
 }
 
-
-
 enum DownloadResult<T> {
     case success(T)
     case error(NetworkError<T>)

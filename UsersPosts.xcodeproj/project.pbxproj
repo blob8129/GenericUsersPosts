@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE02955E211B0FDA00ACC9A2 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02955D211B0FDA00ACC9A2 /* Coordinator.swift */; };
+		CE029560211B117B00ACC9A2 /* InteractorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE02955F211B117B00ACC9A2 /* InteractorDelegate.swift */; };
 		CE39779F21189A9500CCD0C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39779E21189A9500CCD0C9 /* AppDelegate.swift */; };
 		CE3977A121189A9500CCD0C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977A021189A9500CCD0C9 /* ViewController.swift */; };
 		CE3977A421189A9500CCD0C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3977A221189A9500CCD0C9 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE02955D211B0FDA00ACC9A2 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CE02955F211B117B00ACC9A2 /* InteractorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorDelegate.swift; sourceTree = "<group>"; };
 		CE39779B21189A9500CCD0C9 /* UsersPosts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UsersPosts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE39779E21189A9500CCD0C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE3977A021189A9500CCD0C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 				CE3977DC211B007700CCD0C9 /* ViewModelConfigurable.swift */,
 				CE3977E1211B01F200CCD0C9 /* InteractorInput.swift */,
 				CE3977E3211B022200CCD0C9 /* InteractorOutput.swift */,
+				CE02955F211B117B00ACC9A2 /* InteractorDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 				CE3977CB2119F4E800CCD0C9 /* Protocols */,
 				CE3977CF2119F57600CCD0C9 /* Interactor.swift */,
 				CE3977DE211B014600CCD0C9 /* ViewVC.swift */,
+				CE02955D211B0FDA00ACC9A2 /* Coordinator.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -299,6 +305,7 @@
 			files = (
 				CE3977CA2119F2DC00CCD0C9 /* User.swift in Sources */,
 				CE3977D02119F57600CCD0C9 /* Interactor.swift in Sources */,
+				CE02955E211B0FDA00ACC9A2 /* Coordinator.swift in Sources */,
 				CE3977DB211A0E6200CCD0C9 /* UserTVCell.swift in Sources */,
 				CE3977E2211B01F200CCD0C9 /* InteractorInput.swift in Sources */,
 				CE3977A121189A9500CCD0C9 /* ViewController.swift in Sources */,
@@ -309,6 +316,7 @@
 				CE39779F21189A9500CCD0C9 /* AppDelegate.swift in Sources */,
 				CE3977DD211B007700CCD0C9 /* ViewModelConfigurable.swift in Sources */,
 				CE3977DF211B014600CCD0C9 /* ViewVC.swift in Sources */,
+				CE029560211B117B00ACC9A2 /* InteractorDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

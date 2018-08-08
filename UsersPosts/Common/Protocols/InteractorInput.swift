@@ -16,4 +16,5 @@ protocol InteractorInput where ViewModelConvertibleType: Convertible & Decodable
     var entities: [ViewModelConvertibleType] { get set}
     func viewModel(at indexPath: IndexPath) -> ViewModelConvertibleType
     func viewDidLoad()
+    func didSelectedItem(at indexPath: IndexPath)
 }
