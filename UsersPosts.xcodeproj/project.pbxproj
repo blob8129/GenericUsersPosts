@@ -18,6 +18,13 @@
 		CE3977C72118A58B00CCD0C9 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977C62118A58B00CCD0C9 /* Mocks.swift */; };
 		CE3977CA2119F2DC00CCD0C9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977C92119F2DC00CCD0C9 /* User.swift */; };
 		CE3977CD2119F4FA00CCD0C9 /* Convertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977CC2119F4FA00CCD0C9 /* Convertible.swift */; };
+		CE3977D02119F57600CCD0C9 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977CF2119F57600CCD0C9 /* Interactor.swift */; };
+		CE3977D62119F8F800CCD0C9 /* UsersBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977D52119F8F800CCD0C9 /* UsersBuilder.swift */; };
+		CE3977DB211A0E6200CCD0C9 /* UserTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977DA211A0E6200CCD0C9 /* UserTVCell.swift */; };
+		CE3977DD211B007700CCD0C9 /* ViewModelConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977DC211B007700CCD0C9 /* ViewModelConfigurable.swift */; };
+		CE3977DF211B014600CCD0C9 /* ViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977DE211B014600CCD0C9 /* ViewVC.swift */; };
+		CE3977E2211B01F200CCD0C9 /* InteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977E1211B01F200CCD0C9 /* InteractorInput.swift */; };
+		CE3977E4211B022200CCD0C9 /* InteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977E3211B022200CCD0C9 /* InteractorOutput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +53,13 @@
 		CE3977C62118A58B00CCD0C9 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		CE3977C92119F2DC00CCD0C9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CE3977CC2119F4FA00CCD0C9 /* Convertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Convertible.swift; sourceTree = "<group>"; };
+		CE3977CF2119F57600CCD0C9 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		CE3977D52119F8F800CCD0C9 /* UsersBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersBuilder.swift; sourceTree = "<group>"; };
+		CE3977DA211A0E6200CCD0C9 /* UserTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTVCell.swift; sourceTree = "<group>"; };
+		CE3977DC211B007700CCD0C9 /* ViewModelConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelConfigurable.swift; sourceTree = "<group>"; };
+		CE3977DE211B014600CCD0C9 /* ViewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewVC.swift; sourceTree = "<group>"; };
+		CE3977E1211B01F200CCD0C9 /* InteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorInput.swift; sourceTree = "<group>"; };
+		CE3977E3211B022200CCD0C9 /* InteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorOutput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +101,7 @@
 		CE39779D21189A9500CCD0C9 /* UsersPosts */ = {
 			isa = PBXGroup;
 			children = (
-				CE3977CB2119F4E800CCD0C9 /* Protocols */,
+				CE3977E0211B018500CCD0C9 /* Common */,
 				CE3977C021189ABF00CCD0C9 /* Services */,
 				CE3977BE21189AA900CCD0C9 /* Users */,
 				CE3977BF21189AAF00CCD0C9 /* Posts */,
@@ -115,7 +129,9 @@
 		CE3977BE21189AA900CCD0C9 /* Users */ = {
 			isa = PBXGroup;
 			children = (
+				CE3977D32119F8DA00CCD0C9 /* Builder */,
 				CE3977C82119F2CF00CCD0C9 /* Entity */,
+				CE3977D72119FA5900CCD0C9 /* View */,
 			);
 			path = Users;
 			sourceTree = "<group>";
@@ -147,8 +163,37 @@
 			isa = PBXGroup;
 			children = (
 				CE3977CC2119F4FA00CCD0C9 /* Convertible.swift */,
+				CE3977DC211B007700CCD0C9 /* ViewModelConfigurable.swift */,
+				CE3977E1211B01F200CCD0C9 /* InteractorInput.swift */,
+				CE3977E3211B022200CCD0C9 /* InteractorOutput.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CE3977D32119F8DA00CCD0C9 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				CE3977D52119F8F800CCD0C9 /* UsersBuilder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		CE3977D72119FA5900CCD0C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE3977DA211A0E6200CCD0C9 /* UserTVCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE3977E0211B018500CCD0C9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE3977CB2119F4E800CCD0C9 /* Protocols */,
+				CE3977CF2119F57600CCD0C9 /* Interactor.swift */,
+				CE3977DE211B014600CCD0C9 /* ViewVC.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,10 +298,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3977CA2119F2DC00CCD0C9 /* User.swift in Sources */,
+				CE3977D02119F57600CCD0C9 /* Interactor.swift in Sources */,
+				CE3977DB211A0E6200CCD0C9 /* UserTVCell.swift in Sources */,
+				CE3977E2211B01F200CCD0C9 /* InteractorInput.swift in Sources */,
 				CE3977A121189A9500CCD0C9 /* ViewController.swift in Sources */,
 				CE3977C221189AD900CCD0C9 /* NetworkService.swift in Sources */,
+				CE3977E4211B022200CCD0C9 /* InteractorOutput.swift in Sources */,
 				CE3977CD2119F4FA00CCD0C9 /* Convertible.swift in Sources */,
+				CE3977D62119F8F800CCD0C9 /* UsersBuilder.swift in Sources */,
 				CE39779F21189A9500CCD0C9 /* AppDelegate.swift in Sources */,
+				CE3977DD211B007700CCD0C9 /* ViewModelConfigurable.swift in Sources */,
+				CE3977DF211B014600CCD0C9 /* ViewVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

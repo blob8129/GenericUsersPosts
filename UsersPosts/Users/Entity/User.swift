@@ -13,7 +13,7 @@ struct User: Codable {
     let id: Int
     //First and Last Name of the user
     let name: String
-    let userName: String
+    let username: String
     let email: String
     let address: Address
 }
@@ -41,7 +41,7 @@ struct UserViewModel {
 extension User: Convertible {
     func convert() -> UserViewModel {
         return UserViewModel(name: name,
-                             userName: userName,
+                             userName: username,
                              email: email,
                              address: address.description)
     }
