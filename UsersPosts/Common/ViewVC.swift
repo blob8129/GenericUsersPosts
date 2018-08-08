@@ -44,6 +44,12 @@ class ViewVC<ViewModelType, InteractorType: InteractorInput, CellType: ViewModel
         ]);
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPathForSelectedRow, animated: true)
+        }
+    }
+    
     private func registerCells() {
         tableView.register(CellType.self, forCellReuseIdentifier: cellId)
     }

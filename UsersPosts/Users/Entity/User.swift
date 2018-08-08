@@ -24,27 +24,3 @@ struct Address: Codable {
     let city: String
     let zipcode: String
 }
-
-extension Address: CustomStringConvertible {
-    var description: String {
-        return "\(city) \(street) \(suite) \(zipcode)"
-    }
-}
-
-struct UserViewModel {
-    let name: String
-    let userName: String
-    let email: String
-    let address: String
-}
-
-extension User: Convertible {
-    func convert() -> UserViewModel {
-        return UserViewModel(name: name,
-                             userName: username,
-                             email: email,
-                             address: address.description)
-    }
-    
-    typealias TypeToConvertTo = UserViewModel
-}

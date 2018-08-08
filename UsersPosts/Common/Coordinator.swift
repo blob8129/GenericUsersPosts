@@ -21,7 +21,8 @@ final class Coordinator<U>: InteractorDelegate {
     
     func didSelected(entity: U) {
         if let user = entity as? User {
-
+            let vc = PostsBuilder().build(with: user.id)
+            rootViewController.pushViewController(vc, animated: true)
         }
     }
 }

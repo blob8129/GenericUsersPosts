@@ -1,4 +1,15 @@
 //
+//  PostTVCell.swift
+//  UsersPosts
+//
+//  Created by Andrey Volobuev on 8/8/18.
+//  Copyright © 2018 blob8129. All rights reserved.
+//
+
+import Foundation
+
+
+//
 //  UserTVCell.swift
 //  UsersPosts
 //
@@ -9,21 +20,14 @@
 import UIKit
 
 
-class UserTVCell: UITableViewCell, ViewModelConfigurable {
-    
+class PostTVCell: UITableViewCell, ViewModelConfigurable {
+
     lazy var label1: UILabel = { l in
+        l.numberOfLines = 0
         return l
     }(UILabel())
     
     lazy var label2: UILabel = { l in
-        return l
-    }(UILabel())
-    
-    lazy var label3: UILabel = { l in
-        return l
-    }(UILabel())
-    
-    lazy var label4: UILabel = { l in
         l.numberOfLines = 0
         return l
     }(UILabel())
@@ -35,7 +39,7 @@ class UserTVCell: UITableViewCell, ViewModelConfigurable {
         sv.axis = .vertical
         sv.spacing = 8
         return sv
-    }(UIStackView(arrangedSubviews: [label1, label2, label3, label4]))
+    }(UIStackView(arrangedSubviews: [label1, label2]))
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -47,16 +51,14 @@ class UserTVCell: UITableViewCell, ViewModelConfigurable {
         commonInit()
     }
     
-    func configure(for viewModel: UserViewModel) {
-        label1.text = viewModel.name
-        label2.text = viewModel.userName
-        label3.text = viewModel.email
-        label4.text = viewModel.address
+    func configure(for viewModel: PostViewModel) {
+        label1.text = viewModel.title
+        label2.text = viewModel.body
         layoutIfNeeded()
     }
-
+    
     private func commonInit() {
-        accessoryType = .disclosureIndicator
+        selectionStyle = .none
         stackView.setContentCompressionResistancePriority(.defaultHigh, for: .horizontal)
         stackView.setContentCompressionResistancePriority(.defaultHigh, for: .vertical)
         
