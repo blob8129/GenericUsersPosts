@@ -10,6 +10,7 @@ import UIKit
 
 
 final class PostsBuilder {
+    typealias PostsInteractor = Interactor<Post, PostViewModel, Coordinator<Post>>
     
     func build(with userId: Int) -> UIViewController {
         let url = URL(string: "https://jsonplaceholder.typicode.com/posts?userId=\(userId)")!
@@ -17,7 +18,7 @@ final class PostsBuilder {
         let interactor = Interactor<Post, PostViewModel, Coordinator<Post>>(networkService: NetworkService(),
                                                                             url: url,
                                                                             decoder: JSONDecoder())
-        let vc = ViewVC<PostViewModel, Interactor<Post, PostViewModel, Coordinator<Post>>, PostTVCell>()
+        let vc = ViewVC<PostViewModel, PostsInteractor, PostTVCell>()
         interactor.view = vc
         vc.interactor = interactor
         return vc
