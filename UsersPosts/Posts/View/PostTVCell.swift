@@ -5,18 +5,6 @@
 //  Created by Andrey Volobuev on 8/8/18.
 //  Copyright © 2018 blob8129. All rights reserved.
 //
-
-import Foundation
-
-
-//
-//  UserTVCell.swift
-//  UsersPosts
-//
-//  Created by Andrey Volobuev on 8/7/18.
-//  Copyright © 2018 blob8129. All rights reserved.
-//
-
 import UIKit
 
 
@@ -41,7 +29,7 @@ class PostTVCell: UITableViewCell, ViewModelConfigurable {
         return sv
     }(UIStackView(arrangedSubviews: [label1, label2]))
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         commonInit()
     }

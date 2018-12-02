@@ -19,7 +19,6 @@
 		CE39779F21189A9500CCD0C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE39779E21189A9500CCD0C9 /* AppDelegate.swift */; };
 		CE3977A621189A9700CCD0C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3977A521189A9700CCD0C9 /* Assets.xcassets */; };
 		CE3977A921189A9700CCD0C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE3977A721189A9700CCD0C9 /* LaunchScreen.storyboard */; };
-		CE3977B421189A9800CCD0C9 /* UsersPostsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977B321189A9800CCD0C9 /* UsersPostsTests.swift */; };
 		CE3977C221189AD900CCD0C9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977C121189AD900CCD0C9 /* NetworkService.swift */; };
 		CE3977C521189E2300CCD0C9 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977C421189E2300CCD0C9 /* NetworkingTests.swift */; };
 		CE3977C72118A58B00CCD0C9 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3977C62118A58B00CCD0C9 /* Mocks.swift */; };
@@ -60,7 +59,6 @@
 		CE3977A821189A9700CCD0C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE3977AA21189A9700CCD0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE3977AF21189A9800CCD0C9 /* UsersPostsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UsersPostsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CE3977B321189A9800CCD0C9 /* UsersPostsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersPostsTests.swift; sourceTree = "<group>"; };
 		CE3977B521189A9800CCD0C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE3977C121189AD900CCD0C9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		CE3977C421189E2300CCD0C9 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
@@ -141,11 +139,12 @@
 		CE39779D21189A9500CCD0C9 /* UsersPosts */ = {
 			isa = PBXGroup;
 			children = (
+				CE39779E21189A9500CCD0C9 /* AppDelegate.swift */,
+				CE02955D211B0FDA00ACC9A2 /* Coordinator.swift */,
 				CE3977E0211B018500CCD0C9 /* Common */,
 				CE3977C021189ABF00CCD0C9 /* Services */,
 				CE3977BE21189AA900CCD0C9 /* Users */,
 				CE3977BF21189AAF00CCD0C9 /* Posts */,
-				CE39779E21189A9500CCD0C9 /* AppDelegate.swift */,
 				CE3977A521189A9700CCD0C9 /* Assets.xcassets */,
 				CE3977A721189A9700CCD0C9 /* LaunchScreen.storyboard */,
 				CE3977AA21189A9700CCD0C9 /* Info.plist */,
@@ -156,7 +155,6 @@
 		CE3977B221189A9800CCD0C9 /* UsersPostsTests */ = {
 			isa = PBXGroup;
 			children = (
-				CE3977B321189A9800CCD0C9 /* UsersPostsTests.swift */,
 				CE3977B521189A9800CCD0C9 /* Info.plist */,
 				CE3977C421189E2300CCD0C9 /* NetworkingTests.swift */,
 				CE3977C62118A58B00CCD0C9 /* Mocks.swift */,
@@ -236,7 +234,6 @@
 				CE3977CB2119F4E800CCD0C9 /* Protocols */,
 				CE3977CF2119F57600CCD0C9 /* Interactor.swift */,
 				CE3977DE211B014600CCD0C9 /* ViewVC.swift */,
-				CE02955D211B0FDA00ACC9A2 /* Coordinator.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -368,7 +365,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE3977B421189A9800CCD0C9 /* UsersPostsTests.swift in Sources */,
 				CE3977C521189E2300CCD0C9 /* NetworkingTests.swift in Sources */,
 				CE3977C72118A58B00CCD0C9 /* Mocks.swift in Sources */,
 			);
@@ -523,8 +519,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.blob8129.UsersPosts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -541,8 +537,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.blob8129.UsersPosts;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -561,7 +557,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.blob8129.UsersPostsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UsersPosts.app/UsersPosts";
 			};
@@ -582,7 +578,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.blob8129.UsersPostsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UsersPosts.app/UsersPosts";
 			};

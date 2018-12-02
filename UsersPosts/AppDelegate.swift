@@ -14,12 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var coordinator: Coordinator<User>?
     
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func applicationDidFinishLaunching(_ application: UIApplication) {
         let navigationController = UINavigationController()
         coordinator = Coordinator<User>(rootViewController: navigationController)
         coordinator?.window = window
         coordinator?.start()
-        return true
     }
 }
 

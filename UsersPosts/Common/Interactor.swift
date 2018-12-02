@@ -44,10 +44,10 @@ extension Interactor {
                         self.view?.didLoadedViewModels()
                     }
                 } catch let error {
-                    print("D Error \(error)")
+                    print("Decoding error \(error)")
                 }
             case .error(let error):
-                print("Error \(error)")
+                print("Networking error \(error)")
                 break
             }
         }
@@ -55,7 +55,6 @@ extension Interactor {
 }
 
 extension InteractorInput {
-    
     func viewModel(at indexPath: IndexPath) -> ViewModelConvertibleType {
         return entities[indexPath.row]
     }

@@ -37,7 +37,7 @@ class UserTVCell: UITableViewCell, ViewModelConfigurable {
         return sv
     }(UIStackView(arrangedSubviews: [label1, label2, label3, label4]))
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         commonInit()
     }
